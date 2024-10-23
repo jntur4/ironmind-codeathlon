@@ -39,5 +39,5 @@ Afin de pouvoir utiliser votre API, nous vous suggérons d'utiliser l'applicatio
 
 # Danger zone
 
-> [!DANGER]
+> [!CAUTION]
 > Nous vous conseillons de ne pas modifier le `ServiceLocator`.
