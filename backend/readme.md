@@ -1,11 +1,11 @@
 # Backend
 
-## Instalation
+## Installation :inbox_tray: 
 1. Prenez l'IDE de votre choix. ([PyCharm](https://www.jetbrains.com/pycharm/download/?source=google&medium=cpc&campaign=AMER_en_CA_PyCharm_Branded&term=pycharm&content=698987581431&gad_source=1&gclid=Cj0KCQjwveK4BhD4ARIsAKy6pMIW-uosTmAa9Js14EAwl1zDj7-BokIFOzjbAoFSRHsSIomY5lHiTQMaAiRJEALw_wcB&section=windows) est le meilleur d'ailleurs, Community ou Pro edition).
 2. Installez les packages avec requirements.txt (Nous vous conseillons un environnement virtuel).
 3. Lancez l'application avec `python main.py`.
 
-## Configuration
+## Configuration :gear:
 Le fichier app_launcher.py permet de construire l'application. Il lance le serveur backend, initialise les différents services et inscrit les routes.
 
 TL;DR : Renseignez vos nouvelles routes et dépendances dans les fonctions __initialize_dependencies et __setup_app.
@@ -33,11 +33,11 @@ La **couche domaine** sert simplement à représenter nos objets à l'intérieur
 ### Infra
 La **couche infra** réalise les opérations vers la base de données. Elle peut donc ajouter, supprimer et récupérer des informations.
 
-# Postman
+# Postman :email:
 Afin de pouvoir utiliser votre API, nous vous suggérons d'utiliser l'application. [Postman](https://www.postman.com/downloads/).
 (C'est utile pour vos prochains cours btw)
 
-# Danger zone
+# Danger zone :warning:
 
 > [!CAUTION]
 > Nous vous conseillons de ne pas modifier le `ServiceLocator`.
