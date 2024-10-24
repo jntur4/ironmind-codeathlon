@@ -16,5 +16,5 @@ docker-compose up --build --force-recreate --renew-anon-volumes -d
 ```
 Les paramètres spécifiés permettent de réinitialiser complètement la base de données (entres autres) à chaque démarrage, afin que les migrations soient réexécutées. 
 
-> [!INFO]
+> [!TIP]
 > `-d` permet de lancer les conteneurs en arrière-plan. Il est possible de retirer cet argument pour utiliser CTRL+C afin d'arrêter les conteneurs.
