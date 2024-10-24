@@ -10,7 +10,7 @@ Notre entreprise souhaite une solution plug-and-play, c'est-à-dire qu'elle ne p
 
 ## Installation :inbox_tray: 
 1. Prenez l'IDE de votre choix. ([PyCharm](https://www.jetbrains.com/pycharm/download/?source=google&medium=cpc&campaign=AMER_en_CA_PyCharm_Branded&term=pycharm&content=698987581431&gad_source=1&gclid=Cj0KCQjwveK4BhD4ARIsAKy6pMIW-uosTmAa9Js14EAwl1zDj7-BokIFOzjbAoFSRHsSIomY5lHiTQMaAiRJEALw_wcB&section=windows) est le meilleur d'ailleurs, Community ou Pro edition).
-2. Installez les packages avec requirements.txt (Nous vous conseillons un environnement virtuel).
+2. Installez les packages avec `requirements.txt` (Nous vous conseillons un environnement virtuel).
 3. Lancez l'application avec `python main.py`.
 
 ## Configuration :gear:
@@ -28,17 +28,17 @@ TL;DR : Renseignez vos nouvelles routes et dépendances dans les fonctions __ini
 > Vous n'avez pas à modifier le middleware.
 
 ## Description des couches
-### Ressource
+### :arrow_right: Ressource
 La **couche resource** d'une API est le point d'entrée principal pour toutes les requêtes HTTP telles que GET, POST, PUT, et DELETE. Elle sert à séparer la logique de gestion des requêtes HTTP de la logique métier (services) de l'application.
 
-### Service
+### :arrow_right: Service
 La **couche service**, dans notre utilisation aujourd'hui, va nous servir à __effectuer des vérifications__ et à communiquer avec la couche infra qui interagit avec la base de données.
 
 Par exemple, si l'on prend notre classe item, on pourrait réaliser une vérification sur le champ item.price < 0. Cette vérification pourrait renvoyer une réponse au client indiquant que le prix ne peut pas être négatif.
-### Domaine
+### :arrow_right: Domaine
 La **couche domaine** sert simplement à représenter nos objets à l'intérieur de l'application. Dans le template fourni, la classe Item en est un bon exemple.
 
-### Infra
+### :arrow_right: Infra
 La **couche infra** réalise les opérations vers la base de données. Elle peut donc ajouter, supprimer et récupérer des informations.
 
 # Postman :email:
