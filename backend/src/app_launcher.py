@@ -1,6 +1,8 @@
-import pymysql
+import mysql.connector
 import uvicorn
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI
+# from mysql.connector.pooling import PooledMySQLConnection
+import mariadb
 from starlette.middleware.cors import CORSMiddleware
 
 from src.config.service_locator import ServiceLocator
@@ -17,7 +19,8 @@ def launch():
 def __initialize_dependencies():
     ServiceLocator.clear()
 
-    sql_connection = pymysql.connect(host="localhost", user="root", password="pass", database="database")
+    # sql_connection: PooledMySQLConnection = mysql.connector.connect(host="db", port=3306, user="username", password="password", database="database")
+    sql_connection = mariadb.connect(host="db", port=3306, user="username", password="password", database="database")
 
     item_repository = ItemRepository(sql_connection)
     ServiceLocator.register_dependency(ItemService, ItemService(item_repository))

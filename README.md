@@ -9,6 +9,10 @@
 
 [Base de données](./db/README.md)
 
+# Docker :whale:
+
+1. Installer [Docker](https://docs.docker.com/engine/install/) selon votre OS.
+
 ## Fonctionnement du docker-compose
 Démarrer/reconstruire les conteneurs via la commande suivante :
 ```bash

@@ -1,20 +1,33 @@
-version: '3.7'
-
 services:
   db:
     image: mariadb:latest
-    container_name: db
+    container_name: cs-ironmind-database
     restart: always
     env_file:
       - ./db/.env
     volumes:
       - ./db/migrations:/docker-entrypoint-initdb.d:z
+    ports:
+      - "9000:3306"
 
   adminer:
     image: adminer
-    container_name: adminer
+    container_name: cs-ironmind-adminer
     restart: always
     ports:
       - "8080:8080"
     depends_on:
       - db
+      
+  backend:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    container_name: cs-ironmind-backend
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+    ports:
+      - "5000:8080"

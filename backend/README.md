@@ -16,7 +16,7 @@ Notre entreprise souhaite une solution plug-and-play, c'est-à-dire qu'elle ne p
 ## Configuration :gear:
 Le fichier app_launcher.py permet de construire l'application. Il lance le serveur backend, initialise les différents services et inscrit les routes.
 
-TL;DR : Renseignez vos nouvelles routes et dépendances dans les fonctions __initialize_dependencies et __setup_app.
+TL;DR : Renseignez vos nouvelles routes et dépendances dans les fonctions `__initialize_dependencies` et `__setup_app`.
 
 > [!IMPORTANT]
 > Vous n'avez normalement pas à changer l'IP et le PORT du serveur.
@@ -48,7 +48,7 @@ Afin de pouvoir utiliser votre API, nous vous suggérons d'utiliser l'applicatio
 # Docker :whale2:
 Pour constuire le docker:
 ```commandline
-docker build -t ironmind-backend -f ./docker/dockerfile .
+docker build -t cs-ironmind:backend -f ./docker/dockerfile .
 ```
 
 # Danger zone :warning:
