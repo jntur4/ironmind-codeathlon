@@ -45,6 +45,12 @@ La **couche infra** réalise les opérations vers la base de données. Elle peut
 Afin de pouvoir utiliser votre API, nous vous suggérons d'utiliser l'application. [Postman](https://www.postman.com/downloads/).
 (C'est utile pour vos prochains cours btw)
 
+# Docker :whale2:
+Pour constuire le docker:
+```commandline
+docker build -t ironmind-backend -f ./docker/dockerfile .
+```
+
 # Danger zone :warning:
 
 > [!CAUTION]

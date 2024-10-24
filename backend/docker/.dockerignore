@@ -1,0 +1,14 @@
+.ruff_cache
+__pycache__
+
+.gitignore
+./tools
+.github
+.git
+
+./venv
+
+./docker
+.idea
+
+README.md
