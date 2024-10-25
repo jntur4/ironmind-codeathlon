@@ -1,33 +1,39 @@
 services:
   db:
     image: mariadb:latest
-    container_name: cs-ironmind-database
+    container_name: db
     restart: always
     env_file:
       - ./db/.env
     volumes:
       - ./db/migrations:/docker-entrypoint-initdb.d:z
-    ports:
-      - "9000:3306"
+    healthcheck:
+      test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
   adminer:
     image: adminer
-    container_name: cs-ironmind-adminer
+    container_name: adminer
     restart: always
     ports:
       - "8080:8080"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
       
   backend:
     build:
       context: ./backend
       dockerfile: docker/Dockerfile
-    container_name: cs-ironmind-backend
+    container_name: backend
     restart: always
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     volumes:
       - ./backend:/app
     ports:
-      - "5000:8080"
+      - "8000:8080"

@@ -6,6 +6,10 @@ from src.service.item_service import ItemService
 
 router = APIRouter()
 
+@router.get("/")
+def index():
+    return {"message": "Hello, World!"}
+
 @router.get("/items")
 def get_item(item_service: ItemService = Depends(
         lambda: ServiceLocator.get_dependency(ItemService)

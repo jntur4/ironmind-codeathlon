@@ -4,6 +4,7 @@ from fastapi import FastAPI
 # from mysql.connector.pooling import PooledMySQLConnection
 import mariadb
 from starlette.middleware.cors import CORSMiddleware
+import socket
 
 from src.config.service_locator import ServiceLocator
 from src.infra.item_repository import ItemRepository
@@ -12,15 +13,16 @@ from src.service.item_service import ItemService
 
 
 def launch():
+    print("Launching app...")
     __initialize_dependencies()
     app = __setup_app()
-    uvicorn.run(app, host="127.0.0.1", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
 
 def __initialize_dependencies():
     ServiceLocator.clear()
 
     # sql_connection: PooledMySQLConnection = mysql.connector.connect(host="db", port=3306, user="username", password="password", database="database")
-    sql_connection = mariadb.connect(host="db", port=3306, user="username", password="password", database="database")
+    sql_connection = mariadb.connect(host='db', port=3306, user="username", password="password", database="database")
 
     item_repository = ItemRepository(sql_connection)
     ServiceLocator.register_dependency(ItemService, ItemService(item_repository))
