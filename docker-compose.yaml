@@ -37,3 +37,12 @@ services:
       - ./backend:/app
     ports:
       - "8000:8080"
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
