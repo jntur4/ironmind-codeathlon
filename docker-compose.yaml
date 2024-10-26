@@ -30,13 +30,17 @@ services:
       dockerfile: docker/Dockerfile
     container_name: backend
     restart: always
+    healthcheck:
+      test: "curl --fail http://localhost:8080/health || exit 1"
+      interval: 2s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
     depends_on:
       db:
         condition: service_healthy
     volumes:
       - ./backend:/app
-    ports:
-      - "8000:8080"
 
   frontend:
     build: ./frontend
@@ -45,4 +49,5 @@ services:
     ports:
       - "3000:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
