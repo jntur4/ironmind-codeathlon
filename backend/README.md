@@ -16,7 +16,7 @@ Notre entreprise souhaite une solution plug-and-play, c'est-à-dire qu'elle ne p
 ## Configuration :gear:
 Le fichier app_launcher.py permet de construire l'application. Il lance le serveur backend, initialise les différents services et inscrit les routes.
 
-TL;DR : Renseignez vos nouvelles routes et dépendances dans les fonctions `__initialize_dependencies` et `__setup_app`.
+TL;DR : Renseignez vos nouvelles routes dans `__setup_app`.
 
 > [!IMPORTANT]
 > Vous n'avez normalement pas à changer l'IP et le PORT du serveur.
@@ -27,31 +27,20 @@ TL;DR : Renseignez vos nouvelles routes et dépendances dans les fonctions `__in
 > [!NOTE]
 > Vous n'avez pas à modifier le middleware.
 
-## Description des couches
-### :arrow_right: Ressource
-La **couche resource** d'une API est le point d'entrée principal pour toutes les requêtes HTTP telles que GET, POST, PUT, et DELETE. Elle sert à séparer la logique de gestion des requêtes HTTP de la logique métier (services) de l'application.
-
-### :arrow_right: Service
-La **couche service**, dans notre utilisation aujourd'hui, va nous servir à __effectuer des vérifications__ et à communiquer avec la couche infra qui interagit avec la base de données.
-
-Par exemple, si l'on prend notre classe item, on pourrait réaliser une vérification sur le champ item.price < 0. Cette vérification pourrait renvoyer une réponse au client indiquant que le prix ne peut pas être négatif.
-### :arrow_right: Domaine
-La **couche domaine** sert simplement à représenter nos objets à l'intérieur de l'application. Dans le template fourni, la classe Item en est un bon exemple.
-
-### :arrow_right: Infra
-La **couche infra** réalise les opérations vers la base de données. Elle peut donc ajouter, supprimer et récupérer des informations.
-
 # Postman :email:
 Afin de pouvoir utiliser votre API, nous vous suggérons d'utiliser l'application. [Postman](https://www.postman.com/downloads/).
 (C'est utile pour vos prochains cours btw)
 
+> [!NOTE]
+> 127.0.0.1:3000/api/item
+
 # Docker :whale2:
-Pour constuire le docker:
+Pour construire le docker:
 ```commandline
 docker build -t cs-ironmind:backend -f ./docker/dockerfile .
 ```
 
-# Danger zone :warning:
-
-> [!CAUTION]
-> Nous vous conseillons de ne pas modifier le `ServiceLocator`.
+# Code et architecture ?
+Tu trouves que python c'est nul ?
+Tu veux faire une meilleur organisation que juste un fichier ?
+Have fun, fait ce que tu veux, tant que tout est compatible avec docker.
