@@ -1,6 +1,20 @@
 # Ironmind Codeathlon
 > 2e qualification ULaval - CS Games 2025
 
+Bienvenue a la 2e qualification des CS Games 2025 de l'universite laval!
+Aujourd'hui, en equipe de 3, nous allons tester.
+
+# Horraire
+| Horaire       | Description                                |
+|---------------|--------------------------------------------|
+| 19h30        | Lancement de la première version            |
+| 20h          | Début de la compétition                     |
+| 21h          | Changement de siège                         |
+| 22h          | Changement de siège                         |
+| 23h          | Début de la mise en commun                  |
+| 23h15        | Rendu final & fin de la compétition         |
+
+
 ## Description
 
 [Frontend](.)
