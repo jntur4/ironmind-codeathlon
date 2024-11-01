@@ -7,7 +7,7 @@ Aujourd'hui, en equipe de 3, nous allons tester.
 # Horraire
 | Horaire       | Description                                |
 |---------------|--------------------------------------------|
-| 19h30        | Lancement de la première version            |
+| 19h30        | Explication de la compétition               |
 | 20h          | Début de la compétition                     |
 | 21h          | Changement de siège                         |
 | 22h          | Changement de siège                         |
