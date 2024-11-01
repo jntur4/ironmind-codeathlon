@@ -39,8 +39,3 @@ Pour construire le docker:
 ```commandline
 docker build -t cs-ironmind:backend -f ./docker/dockerfile .
 ```
-
-# Code et architecture ?
-Tu trouves que python c'est nul ?
-Tu veux faire une meilleur organisation que juste un fichier ?
-Have fun, fait ce que tu veux, tant que tout est compatible avec docker.
