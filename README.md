@@ -1,12 +1,12 @@
 # Ironmind Codeathlon
-> 2e qualification ULaval - CS Games 2025
+> 2ème qualification ULaval - CS Games 2025
 
 L'objectif est de créer une plateforme permettant l'achat de billets pour les matchs de football à domicile du Rouge et Or de l'Université Laval. Ce projet est réalisé sous la forme d'un triathlon par une équipe de 3 développeurs aspirants au CS Games 2025, chaque membre ayant une heure pour travailler sur chaque composant de la plateforme.
 
 La plateforme est divisée en trois composants :
-- Frontend : Interface utilisateur permettant la consultation des événements et l'achat de billets.
-- Backend : Gestion des transactions, des utilisateurs et des réservations de sièges.
-- Base de Données : Stockage des données utilisateur, des événements, et des sièges.
+- **Frontend**: Interface utilisateur permettant la consultation des événements et l'achat de billets.
+- **Backend**: Gestion des transactions, des utilisateurs et des réservations de sièges.
+- **Base de données**: Stockage des données utilisateur, des événements, et des sièges.
 
 ## Règlements de la Compétition
 - La compétition est en équipe de **3**.
@@ -52,15 +52,14 @@ Les paramètres spécifiés permettent de réinitialiser complètement la base d
 
 3. **Création de compte**
     
-    Champs requis :
-
-        - Prénom
-        - Nom de famille
-        - Sexe (Homme, Femme, non-binaire, etc.)
-        - Programme (sélectionné parmi ceux stockés en base de données)
-        - Date de naissance
-        - Courriel ULaval (validation sur le domaine @ulaval.ca)
-        - Mot de passe (minimum 8 caractères, avec au moins un chiffre et un symbole)
+    Champs requis:
+    - Prénom
+    - Nom de famille
+    - Sexe (Homme, Femme, non-binaire, etc.)
+    - Programme (sélectionné parmi ceux stockés en base de données)
+    - Date de naissance
+    - Courriel ULaval (validation sur le domaine @ulaval.ca)
+    - Mot de passe (minimum 8 caractères, avec au moins un chiffre et un symbole)
 
 4. **Connexion et gestion de compte**
 
@@ -86,7 +85,7 @@ Les paramètres spécifiés permettent de réinitialiser complètement la base d
     - Validation des données envoyées par le frontend.
     - Hashage du mot de passe.
     - Vérification d'unicité du mot de passe.
-    - Validation du sexe avec l'API genderize.io :
+    - Validation du sexe avec l'API [genderize.io](https://genderize.io/) :
         - Si le sexe fourni ne correspond pas au sexe supposé par l'API, la création est refusée (sexe Homme ou Femme seulement).
 
 3. **Connexion et modification d'utilisateur**
@@ -108,6 +107,7 @@ Les paramètres spécifiés permettent de réinitialiser complètement la base d
         - Dominance de programme : augmentation en fonction du nombre de Fibonacci si le programme est majoritaire dans une section.
         - Diversité nationale : réduction de 10 % pour les utilisateurs dont le pays le plus probable n'est pas membre du G7 (API nationalize.io).
         - Réduction basée sur l'âge : rabais de 2 $ si la somme des chiffres de l'âge est pair, ou ajout du chiffre si tous les chiffres sont identiques.
+
 6. **Consultation des Billets Réservés**
 
     - Route pour afficher les billets réservés par l'utilisateur.
