@@ -150,4 +150,5 @@ Les paramètres spécifiés permettent de réinitialiser complètement la base d
     Migration avec fausses données, incluant une procédure permettant de générer un nombre défini d'utilisateurs, d'événements et de billets.
 
 ### Normalisation
-    La base de données respecte le plus possible les formes normales pour assurer la cohérence et l'efficacité.
+
+La base de données respecte le plus possible les formes normales pour assurer la cohérence et l'efficacité.
