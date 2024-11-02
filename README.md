@@ -152,3 +152,11 @@ Les paramètres spécifiés permettent de réinitialiser complètement la base d
 ### Normalisation
 
 La base de données respecte le plus possible les formes normales pour assurer la cohérence et l'efficacité.
+
+# Modalités de rendu
+Nous vous fournissons un template de base, mais vous êtes libre de le modifier ou de le recréer selon vos préférences et besoins avec le(s) langage(s) et technologie(s) de votre choix
+
+**Exigence principale**: assurez-vous que l'intégralité du projet puisse être lancée avec **une seule commande Docker**, permettant de démarrer facilement le frontend, le backend et la base de données.
+
+> [!WARNING]
+> Pas de docker = pas de correction.
