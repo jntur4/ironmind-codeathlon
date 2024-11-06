@@ -29,6 +29,7 @@ La plateforme est divisée en trois composants :
 
 1. Installer [Docker](https://docs.docker.com/engine/install/) selon votre OS.
 2. Une personne de votre équipe va forker le dépôt (public ou privé). Les deux autres personnes vont ensuite cloner SON dépôt.
+3. Mettez en place un moyen de communication pour partager vos idées selon la section `Communication **limitée** aux partages suivants`.
 
 ## Fonctionnement du docker-compose
 Démarrer/reconstruire les conteneurs via la commande suivante :

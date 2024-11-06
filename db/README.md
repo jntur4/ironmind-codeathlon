@@ -4,7 +4,7 @@ Bienvenue dans la base de données de notre projet de vente de billets.
 
 Notre équipe a déjà proposé une architecture et un début de projet. Cependant, elle est actuellement en vacances et le projet doit être finalisé. Il est de votre responsabilité de compléter les différentes tâches afin que notre application soit un succès.
 
-Vous avez carte blanche pour réaliser la base de données. Si vous préférez MariaDB (cc Sam), Oracle, PostgreSQL (mais pas Rust, s'il vous plaît), amusez-vous !
+Vous avez carte blanche pour réaliser la base de données. Si vous préférez Oracle, PostgreSQL (mais pas Rust, s'il vous plaît), amusez-vous !
 
 Notre entreprise souhaite une solution plug-and-play, c'est-à-dire qu'elle ne prendra pas le temps d’apprendre à installer votre application. Pour cette raison, l’un de nos techniciens a jugé bon de vous fournir un Dockerfile pour construire l’application. Nous attendons donc de vous un Dockerfile que notre équipe d’infrastructure pourra facilement déployer dans le cloud.
 
