@@ -15,7 +15,7 @@ La plateforme est divisée en trois composants :
     - Schéma de base de données : partageable entre les membres via des outils collaboratifs comme `visio`, `draw.io`, etc.
     - Documentation d'API : routes, paramètres, et réponses, partageable entre les membres.
 
-## Horraire
+## Horaire
 | Horaire       | Description                                |
 |---------------|--------------------------------------------|
 | 19h30        | Explication de la compétition               |
@@ -28,6 +28,7 @@ La plateforme est divisée en trois composants :
 # Installation :whale:
 
 1. Installer [Docker](https://docs.docker.com/engine/install/) selon votre OS.
+2. Une personne de votre équipe va forker le dépôt (public ou privé). Les deux autres personnes vont ensuite cloner SON dépôt.
 
 ## Fonctionnement du docker-compose
 Démarrer/reconstruire les conteneurs via la commande suivante :
@@ -155,6 +156,8 @@ La base de données respecte le plus possible les formes normales pour assurer l
 
 # Modalités de rendu
 Nous vous fournissons un template de base, mais vous êtes libre de le modifier ou de le recréer selon vos préférences et besoins avec le(s) langage(s) et technologie(s) de votre choix
+
+Rendu à l'étape de la mise en commun, poussez votre code dans le dépôt. Envoyez le lien de votre dépôt à l'adresse suivante : clement.abergel.1@ulaval.ca.
 
 **Exigence principale**: assurez-vous que l'intégralité du projet puisse être lancée avec **une seule commande Docker**, permettant de démarrer facilement le frontend, le backend et la base de données.
 
