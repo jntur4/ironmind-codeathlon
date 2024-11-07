@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Réservation de billets - Rouge et Or</title>
+    <title>Consultation des évènements - Rouge et Or</title>
 
     <link rel="icon" href="img/Logo_RougeEtOr.ico">
     <link rel="stylesheet" href="css/style.css">
@@ -27,12 +27,34 @@
     </header>
 
     <section class="hero">
-        <h1>Bienvenue sur le site de réservation du Rouge et Or de l'Université Laval</h1>
-        <a href="Reservation.html" id="ul-buy-tickets-btn" class="cta-button">Acheter des billets</a>
+        <div id="evenement">
+        </div>
     </section>
 
     <footer class="footer">
         <p>&copy; 2024 Université Laval - Tous droits réservés</p>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON("/api/evenements" , function(data) {
+                var tbl_body = document.createElement("tbody");
+                var odd_even = false;
+                $.each(data, function() {
+                    var tbl_row = tbl_body.insertRow();
+                    tbl_row.className = odd_even ? "odd" : "even";
+                    $.each(this, function(k , v) {
+                        console.log(v)
+                        var cell = tbl_row.insertCell();
+                        cell.appendChild(document.createTextNode(v));
+                        cell.style.cssText += 'padding: 10px';
+
+                    });        
+                    odd_even = !odd_even;               
+                });
+                $("#evenements").append(tbl_body); // Il manque le nom des colonnes
+            });
+        });
+    </script>
 </body>
 </html>

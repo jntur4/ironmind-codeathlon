@@ -1,0 +1,30 @@
+<form>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Prenom</label>
+                <input class="form-control" id="prenom">
+            </div>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input class="form-control" id="nom">
+            </div>
+            <div class="mb-3">
+                <label for="sexe" class="form-label">Sexe</label>
+                <input class="form-control" id="sexe">
+            </div>
+            <div class="mb-3">
+                <label for="programme" class="form-label">Programme</label>
+                <input type="" class="form-control" id="programme">
+            </div>
+            <div class="mb-3"></div>
+                <label for="date" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Adresse courriel</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3"></div>
+                <label for="mdp" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="mdp">
+            </div>
+        </form>
